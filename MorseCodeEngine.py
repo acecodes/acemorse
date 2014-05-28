@@ -1,6 +1,17 @@
 # Morse Code Generator/Translator
 # Functions for creating or translating Morse code messages.
 
+"""
+
+THIS VERY ROUGH MORSE CODE ENCODER/TRANSLATOR
+LEAD TO THE CREATION OF 'THE CODE ENGINE', A FLASK APP HOSTED ON HEROKU
+
+PLEASE VISIT GITHUB.COM/ACECODES/CODESITE OR ENGINE.ACECODES.NET TO SEE A
+MUCH MORE REFINED VERSION OF THIS CODE
+
+"""
+
+
 alphabet = {'0':'-----', '1':'.----', '2':'..---', '3':'...--',
 '4':'....-','5':'.....','6':'-....','7':'--...','8':'---..','9':'----.', 'a':'.-', 'b':'-...', 'c':'-.-.', 'd':'-..', 'e':'.', 'f':'..-.','g':'--.','h':'....',
 'i':'..','j':'.---','k':'-.-','l':'.-..','m':'--','n':'-.','o':'---','p':'.--.','q':'--.-','r':'.-.',
