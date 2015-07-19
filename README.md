@@ -1,3 +1,19 @@
-<h1>Morse Code Engine</h1>
+# PyMorse
+### Morse code library for Python 2.x & 3.x
 
-<p>This script can do two things: generate Morse code or translate it. It's in basic form right now, but once I finish off a few other projects I hope to come back and refine it further (primarily with a GUI and perhaps a web version).</p>
+---
+Example usage:
+
+    from pymorse import MorseCode
+
+    morse = MorseCode()
+    
+    text = 'Hello world!'
+    
+    print('Original text: {}'.format(text))
+    message = morse.generate(text)
+    
+    print('Morse code: {}'.format(message))
+    translate = morse.translate(message)
+    
+    print('Back to English: {}'.format(translate))
