@@ -41,14 +41,14 @@ class MorseCode:
             ' ': ''}
 
         # Only holds alphanumeric characters
-        self.alpha_list = []
+        self.alpha_list = [letter for letter in self.alphabet.keys()]
         # Only holds Morse code
-        self.code_list = []
+        self.code_list = [code for code in self.alphabet.values()]
 
-        # Looping through the dictionary to separate the alphanumerics and Morse code
-        for k, v in sorted(self.alphabet.items()):
-            self.alpha_list.append(k)
-            self.code_list.append(v)
+        # Punctuation characters
+        self.punc_eng = [punc for punc in self.punctuation.keys()]
+        # Punctuation Morse code
+        self.punc_codes = [code for code in self.punctuation.values()]
 
     def generate(self, text):
         """
@@ -73,8 +73,6 @@ class MorseCode:
         """
         morse = morse.split(' ')
         english = []
-        punc_codes = list(self.punctuation.values())
-        punc_eng = list(self.punctuation.keys())
         for code in morse:
             if code in self.code_list:
                 x = self.code_list.index(code)
@@ -82,7 +80,7 @@ class MorseCode:
             # Attach punctuation or spaces as needed
             if code == '':
                 english.append(' ')
-            if code in punc_codes:
-                index = punc_codes.index(code)
-                english.append(punc_eng[index])
+            if code in self.punc_codes:
+                index = self.punc_codes.index(code)
+                english.append(self.punc_eng[index])
         return ''.join(english)
