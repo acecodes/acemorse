@@ -1,4 +1,4 @@
-from pymorse import MorseCode
+from acemorse import MorseCode
 
 morse = MorseCode()
 
